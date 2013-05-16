@@ -16,6 +16,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		rc = RouteController.generateRouteController(1);
+		rc.getDefaultRoute();
 	}
 
 	@Override
