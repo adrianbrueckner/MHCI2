@@ -22,6 +22,22 @@ public class RouteActivity extends Activity {
 		
 		TextView title = (TextView) findViewById(R.id.LocationTitle);
 		title.setText(r.getCurrendLocation().getTitle());
+		
+		TextView hint1 = (TextView) findViewById(R.id.locationHint1);
+		TextView hint2 = (TextView) findViewById(R.id.locationHint2);
+		TextView hint3 = (TextView) findViewById(R.id.locationHint3);
+		TextView hint4 = (TextView) findViewById(R.id.locationHint4);
+		TextView hint5 = (TextView) findViewById(R.id.locationHint5);
+		TextView[] tvHints = {hint1, hint2, hint3, hint4, hint5};
+		String[] hints = r.getCurrendLocation().getHints();
+		
+		for(int i = 0; i < 5; i++){
+			try{
+				tvHints[i].setText(hints[i]);
+			}catch(ArrayIndexOutOfBoundsException e){
+				tvHints[i].setText("");
+			}
+		}
 	}
 
 	@Override
