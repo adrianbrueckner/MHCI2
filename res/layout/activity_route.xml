@@ -15,31 +15,31 @@
         android:layout_marginTop="43dp"
         android:orientation="vertical" >
 
-        <TextureView
+        <TextView
             android:id="@+id/locationHint1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hint 1" />
 
-        <TextureView
+        <TextView
             android:id="@+id/locationHint2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hint 2" />
 
-        <TextureView
+        <TextView
             android:id="@+id/locationHint3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hint 3" />
 
-        <TextureView
+        <TextView
             android:id="@+id/locationHint4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hint 4" />
 
-        <TextureView
+        <TextView
             android:id="@+id/locationHint5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
