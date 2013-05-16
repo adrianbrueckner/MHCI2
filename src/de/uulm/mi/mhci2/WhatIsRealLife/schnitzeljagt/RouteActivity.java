@@ -1,33 +1,34 @@
 package de.uulm.mi.mhci2.WhatIsRealLife.schnitzeljagt;
 
 import de.uulm.mi.mhci2.WhatIsRealLife.schnitzeljagt.control.RouteController;
+import de.uulm.mi.mhci2.WhatIsRealLife.schnitzeljagt.resource.Route;
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.view.Menu;
-import android.view.View;
+import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class RouteActivity extends Activity {
 	
-	private RouteController rc;
-
+	RouteController rc;
+	Route r;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		rc = RouteController.generateRouteController(1);
+		setContentView(R.layout.activity_route);		
+		rc = RouteController.getRouteController();
+		r = rc.getActiveRoute();
+		
+		TextView title = (TextView) findViewById(R.id.LocationTitle);
+		title.setText(r.getCurrendLocation().getTitle());
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.route, menu);
 		return true;
-	}
-	
-	public void start_route(View v){
-		Intent intent = new Intent(this, RouteActivity.class);
-    	startActivity(intent);
 	}
 
 }
