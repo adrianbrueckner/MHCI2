@@ -12,7 +12,7 @@
         android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="60dp"
         android:orientation="vertical" >
 
         <TextView
@@ -58,8 +58,9 @@
         android:id="@+id/button1"
         android:layout_width="230dp"
         android:layout_height="50dp"
-        android:layout_alignBottom="@+id/linearLayout1"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
         android:text="@string/scanbutton" />
 
 </RelativeLayout>

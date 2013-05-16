@@ -4,6 +4,7 @@ import de.uulm.mi.mhci2.WhatIsRealLife.schnitzeljagt.control.RouteController;
 import de.uulm.mi.mhci2.WhatIsRealLife.schnitzeljagt.resource.Route;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
 
@@ -19,6 +20,8 @@ public class RouteActivity extends Activity {
 		setContentView(R.layout.activity_route);		
 		rc = RouteController.getRouteController();
 		r = rc.getActiveRoute();
+
+		Log.d("nerv", "title to be cast");
 		
 		TextView title = (TextView) findViewById(R.id.LocationTitle);
 		title.setText(r.getCurrendLocation().getTitle());
